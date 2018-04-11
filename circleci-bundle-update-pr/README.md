@@ -1,5 +1,7 @@
 # circleci-bundle-update-pr runner
 
+Using this image, to be easily to execute [circleci-bundle-update-pr](https://github.com/masutaka/circleci-bundle-update-pr) command.
+
 ## required ENV
 
 Set environment vars on your CircleCI's project:
@@ -23,6 +25,8 @@ bundle-update-pr-job:
     - checkout
     - run: build
 ```
+
+Or if your project is nested, please use `circleci-bundle-update-pr-with-lock-diff` instead.
 
 ### Workflow
 

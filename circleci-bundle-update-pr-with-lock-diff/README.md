@@ -1,5 +1,7 @@
 # circleci-bundle-update-pr-with-lock-diff runner
 
+Using this image, to be easily to execute [circleci-bundle-update-pr](https://github.com/masutaka/circleci-bundle-update-pr) and [lock_diff](https://github.com/vividmuimui/lock_diff) command.
+
 ## required ENV
 
 Set environment vars on your CircleCI's project:

@@ -1,5 +1,7 @@
 # ci-yarn-upgrade runner
 
+Using this image, to be easily to execute [ci-yarn-upgrade](https://github.com/taichi/ci-yarn-upgrade) command.
+
 ## required ENV
 
 Set environment vars on your CircleCI's project:
@@ -24,6 +26,19 @@ ci-yarn-upgrade-job:
   steps:
     - checkout
     - run: build
+```
+
+Or your project is nested:
+```
+ci-yarn-upgrade-job:
+  docker:
+    image: yhirano55/ci-yarn-upgrade:8
+  working_directory: ~/myapp
+  steps:
+    - checkout
+    - run:
+        command: build
+        working_directory: target_repo
 ```
 
 ### Workflow
